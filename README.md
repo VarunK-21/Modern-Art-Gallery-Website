@@ -1,9 +1,33 @@
-The Modern Frame Art Gallery Static Website
-
-Author: Varun.K
-
 Overview:
 A minimalistic, elegant, desktop-oriented website for a fictional art gallery. Built using only HTML5 and CSS3, featuring a fixed header, smooth hover effects, CSS Grid gallery, and a modern, muted aesthetic.
+
+# 🎨 The Modern Frame — Art Gallery Website
+_A minimalistic, elegant, desktop-oriented website built with only **HTML5 & CSS3**._
+
+---
+
+## 📸 Preview
+
+### Home Page  
+<img width="2521" height="1440" alt="Screenshot 2025-09-23 220240" src="https://github.com/user-attachments/assets/23b136c5-4210-4109-8161-86e50af99811" />
+
+
+### Gallery Page  
+<img width="2517" height="1416" alt="Screenshot 2025-09-23 220256" src="https://github.com/user-attachments/assets/c39c0401-7a17-4449-ae06-11b7ee9f7360" />
+
+
+### About Page  
+<img width="2514" height="1413" alt="Screenshot 2025-09-23 220308" src="https://github.com/user-attachments/assets/c715e2fd-332a-4867-a163-2df10e464a03" />
+
+
+### Contact Page  
+<img width="2539" height="1432" alt="Screenshot 2025-09-23 220320" src="https://github.com/user-attachments/assets/9e30444f-c7dc-4f01-be5c-c82478b20299" />
+
+---
+
+## 🎥 Virtual Gallery Tour Video
+[![Watch the Virtual Gallery Tour]([https://img.youtube.com/vi/VIDEO_ID/maxresdefault.jpg](https://artsandculture.google.com/project/virtual-tours))]([https://www.youtube.com/watch?v=VIDEO_ID](https://artsandculture.google.com/project/virtual-tours))
+
 
 Structure:
 - index.html — Home: hero with background image, featured badge, animated banner, welcome + upcoming exhibition
@@ -27,16 +51,17 @@ Implemented Features:
 - Consistent typography and color palette with custom CSS variables
 
 Known Issues:
-- Images are loaded from picsum.photos and change periodically; for strict offline demos, download assets to the images/ directory.
-- YouTube embed depends on network connectivity.
+- Images are loaded from manually uploaded photos and change periodically; for strict offline demos, download assets to the images/ directory.
+- Virtual Tour depends on network connectivity.
 
 Browsers Tested:
 - Chrome (current)
 - Firefox (current)
-
+  
 How to View:
 Open index.html in a modern desktop browser. Navigate using the fixed header.
 
+Author: Varun Kilari
 
 
 
