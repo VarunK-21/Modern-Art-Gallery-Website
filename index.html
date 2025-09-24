@@ -9,12 +9,13 @@
 <body>
 	<header class="header">
 		<div class="container nav">
-			<div class="brand">The Modern Frame</div>
+			<a class="brand" href="index.html">The Modern Frame</a>
 			<nav class="menu" aria-label="Primary">
 				<a href="index.html" aria-current="page">Home</a>
 				<a href="gallery.html">Gallery</a>
 				<a href="about.html">About</a>
 				<a href="contact.html">Contact</a>
+				<button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">Dark</button>
 			</nav>
 		</div>
 	</header>
@@ -26,6 +27,9 @@
 				<h1>Quiet Forms, Bold Spaces</h1>
 				<p class="lead">A contemporary gallery curating minimal, tactile work from emerging voices.</p>
 				<span class="banner">Open House! This Saturday 4–7 PM</span>
+				<figure class="figure">
+                    <img src="images/home 2.jpeg" alt="White cube gallery installation view">
+                </figure>
 			</div>
 		</section>
 
@@ -44,7 +48,7 @@
 		<section class="section">
 			<div class="container grid-2">
 				<figure class="figure">
-					<img src="images/home2.jpg" alt="White cube gallery installation view">
+					<img src="images/home 3.jpg" alt="White cube gallery installation view"> <!-- changed to home 2 -->
 				</figure>
 				<article class="card">
 					<h2>Upcoming Exhibition</h2>
@@ -53,6 +57,7 @@
 				</article>
 			</div>
 		</section>
+
 	</main>
 
 	<footer class="footer">
@@ -61,5 +66,24 @@
 			<small class="muted">Minimal design for maximal looking</small>
 		</div>
 	</footer>
-</body>
+	<script>
+		(function() {
+			var root = document.documentElement;
+			var key = 'tmf-theme';
+			var saved = localStorage.getItem(key);
+			if (saved) { root.setAttribute('data-theme', saved); }
+			var btn = document.getElementById('themeToggle');
+			if (btn) {
+				btn.addEventListener('click', function() {
+					var current = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+					root.setAttribute('data-theme', current);
+					localStorage.setItem(key, current);
+					btn.textContent = current === 'dark' ? 'Light' : 'Dark';
+				});
+				var currentTheme = root.getAttribute('data-theme') || 'light';
+				btn.textContent = currentTheme === 'dark' ? 'Light' : 'Dark';
+			}
+		})();
+	</script>
+	</body>
 </html>

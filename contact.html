@@ -9,12 +9,13 @@
 <body>
 	<header class="header">
 		<div class="container nav">
-			<div class="brand">The Modern Frame</div>
+			<a class="brand" href="index.html">The Modern Frame</a>
 			<nav class="menu" aria-label="Primary">
 				<a href="index.html">Home</a>
 				<a href="gallery.html">Gallery</a>
 				<a href="about.html">About</a>
 				<a href="contact.html" aria-current="page">Contact</a>
+				<button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">Dark</button>
 			</nav>
 		</div>
 	</header>
@@ -57,5 +58,24 @@
 			<small class="muted">We look forward to your visit</small>
 		</div>
 	</footer>
-</body>
+	<script>
+		(function() {
+			var root = document.documentElement;
+			var key = 'tmf-theme';
+			var saved = localStorage.getItem(key);
+			if (saved) { root.setAttribute('data-theme', saved); }
+			var btn = document.getElementById('themeToggle');
+			if (btn) {
+				btn.addEventListener('click', function() {
+					var current = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+					root.setAttribute('data-theme', current);
+					localStorage.setItem(key, current);
+					btn.textContent = current === 'dark' ? 'Light' : 'Dark';
+				});
+				var currentTheme = root.getAttribute('data-theme') || 'light';
+				btn.textContent = currentTheme === 'dark' ? 'Light' : 'Dark';
+			}
+		})();
+	</script>
+	</body>
 </html>
