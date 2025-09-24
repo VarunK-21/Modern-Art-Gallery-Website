@@ -24,9 +24,9 @@ _A minimalistic, elegant, desktop-oriented website built with only **HTML5 & CSS
 <img width="2539" height="1432" alt="Screenshot 2025-09-23 220320" src="https://github.com/user-attachments/assets/9e30444f-c7dc-4f01-be5c-c82478b20299" />
 
 ---
+## 🎥 Virtual Gallery Tour  
 
-## 🎥 Virtual Gallery Tour Video
-[![Watch the Virtual Gallery Tour]([https://img.youtube.com/vi/VIDEO_ID/maxresdefault.jpg](https://artsandculture.google.com/project/virtual-tours))]([https://www.youtube.com/watch?v=VIDEO_ID](https://artsandculture.google.com/project/virtual-tours))
+[![Watch the Virtual Gallery Tour](https://artsandculture.google.com/project/virtual-tours)](https://artsandculture.google.com/project/virtual-tours)
 
 
 Structure:
@@ -53,6 +53,7 @@ Implemented Features:
 Known Issues:
 - Images are loaded from manually uploaded photos and change periodically; for strict offline demos, download assets to the images/ directory.
 - Virtual Tour depends on network connectivity.
+- The images are already provided in the repositroy, after downloading the files shift all the images into images folder.
 
 Browsers Tested:
 - Chrome (current)
