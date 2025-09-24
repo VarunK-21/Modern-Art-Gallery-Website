@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>The Modern Frame — Contact</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header class="header">
+		<div class="container nav">
+			<a class="brand" href="index.html">The Modern Frame</a>
+			<nav class="menu" aria-label="Primary">
+				<a href="index.html">Home</a>
+				<a href="gallery.html">Gallery</a>
+				<a href="about.html">About</a>
+				<a href="contact.html" aria-current="page">Contact</a>
+				<button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">Dark</button>
+			</nav>
+		</div>
+	</header>
+
+	<main>
+		<section class="section">
+			<div class="container grid-2">
+				<article class="card">
+					<h1>Visit Us</h1>
+					<p>124 Mason Lane, Suite 2A<br>New Delhi, DL 110001</p>
+					<p>+91 88 0000 1234<br><a href="mailto:hello@modernframe.gallery">hello@modernframe.gallery</a></p>
+				</article>
+				<aside>
+					<table class="table" aria-label="Studio hours">
+						<thead>
+							<tr>
+								<th>Day</th>
+								<th>Opening Time</th>
+								<th>Closing Time</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr><td>Tuesday</td><td>11:00</td><td>18:00</td></tr>
+							<tr><td>Wednesday</td><td>11:00</td><td>18:00</td></tr>
+							<tr><td>Thursday</td><td>11:00</td><td>18:00</td></tr>
+							<tr><td>Friday</td><td>11:00</td><td>18:00</td></tr>
+							<tr><td>Saturday</td><td>12:00</td><td>17:00</td></tr>
+							<tr><td>Sunday</td><td>Closed</td><td>Closed</td></tr>
+							<tr><td>Monday</td><td>Closed</td><td>Closed</td></tr>
+						</tbody>
+					</table>
+				</aside>
+			</div>
+		</section>
+	</main>
+
+	<footer class="footer">
+		<div class="container">
+			<small>© 2025 The Modern Frame</small>
+			<small class="muted">We look forward to your visit</small>
+		</div>
+	</footer>
+	<script>
+		(function() {
+			var root = document.documentElement;
+			var key = 'tmf-theme';
+			var saved = localStorage.getItem(key);
+			if (saved) { root.setAttribute('data-theme', saved); }
+			var btn = document.getElementById('themeToggle');
+			if (btn) {
+				btn.addEventListener('click', function() {
+					var current = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+					root.setAttribute('data-theme', current);
+					localStorage.setItem(key, current);
+					btn.textContent = current === 'dark' ? 'Light' : 'Dark';
+				});
+				var currentTheme = root.getAttribute('data-theme') || 'light';
+				btn.textContent = currentTheme === 'dark' ? 'Light' : 'Dark';
+			}
+		})();
+	</script>
+	</body>
+</html>

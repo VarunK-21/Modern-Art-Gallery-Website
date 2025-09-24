@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>The Modern Frame — Home</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header class="header">
+		<div class="container nav">
+			<a class="brand" href="index.html">The Modern Frame</a>
+			<nav class="menu" aria-label="Primary">
+				<a href="index.html" aria-current="page">Home</a>
+				<a href="gallery.html">Gallery</a>
+				<a href="about.html">About</a>
+				<a href="contact.html">Contact</a>
+				<button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">Dark</button>
+			</nav>
+		</div>
+	</header>
+
+	<main>
+		<section class="hero">
+			<div class="badge-featured">Featured!</div>
+			<div class="container hero-content">
+				<h1>Quiet Forms, Bold Spaces</h1>
+				<p class="lead">A contemporary gallery curating minimal, tactile work from emerging voices.</p>
+				<span class="banner">Open House! This Saturday 4–7 PM</span>
+				<figure class="figure">
+                    <img src="images/home 2.jpeg" alt="White cube gallery installation view">
+                </figure>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="container grid-2">
+				<article class="card">
+					<h2>Welcome to The Modern Frame</h2>
+					<p>We present thoughtfully curated exhibitions across paintings, sculpture, and mixed media, with an emphasis on materiality and restraint. Our space invites slower looking and deep attention.</p>
+				</article>
+				<figure class="figure">
+					<img src="images/home1.jpg" alt="Calm gallery interior with minimalist display">
+				</figure>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="container grid-2">
+				<figure class="figure">
+					<img src="images/home 3.jpg" alt="White cube gallery installation view"> <!-- changed to home 2 -->
+				</figure>
+				<article class="card">
+					<h2>Upcoming Exhibition</h2>
+					<p class="muted tag">Oct 15 — Dec 10</p>
+					<p><strong>Edges of Silence</strong> — a group show exploring the geometry of stillness through layered surfaces and subtle color fields.</p>
+				</article>
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="footer">
+		<div class="container">
+			<small>© 2025 The Modern Frame</small>
+			<small class="muted">Minimal design for maximal looking</small>
+		</div>
+	</footer>
+	<script>
+		(function() {
+			var root = document.documentElement;
+			var key = 'tmf-theme';
+			var saved = localStorage.getItem(key);
+			if (saved) { root.setAttribute('data-theme', saved); }
+			var btn = document.getElementById('themeToggle');
+			if (btn) {
+				btn.addEventListener('click', function() {
+					var current = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+					root.setAttribute('data-theme', current);
+					localStorage.setItem(key, current);
+					btn.textContent = current === 'dark' ? 'Light' : 'Dark';
+				});
+				var currentTheme = root.getAttribute('data-theme') || 'light';
+				btn.textContent = currentTheme === 'dark' ? 'Light' : 'Dark';
+			}
+		})();
+	</script>
+	</body>
+</html>
